@@ -1,22 +1,4 @@
-#include <iostream>
-using namespace std;
-
-int main() {
-    int year;
-    cout << "Nhap nam: ";
-    cin >> year;
-
-    // Kiểm tra năm nhuận
-    if (year % 400 == 0) {
-        cout << year << " la nam nhuan." << endl;
-    }
-    if (year % 4 == 0 && year % 100 != 0) {
-        cout << year << " la nam nhuan." << endl;
-    }
-    if (year % 400 != 0 && !(year % 4 == 0 && year % 100 != 0)) {
-        cout << year << " khong phai nam nhuan." << endl;
-    }
-
-    return 0;
-}
-
+year = int(input("Nhập năm: "))
+result = ["Không phải năm nhuận", "Năm nhuận"]
+is_leap = (year % 400 == 0 or (year % 4 == 0 and year % 100 != 0))
+print(result[is_leap])
